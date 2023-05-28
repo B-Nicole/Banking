@@ -1,6 +1,7 @@
 package Banking;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.LinkedList;
 
 // class where each customer establishes their account and transactions 
@@ -19,9 +20,6 @@ class Transaction{
         return;
     }
 }
-
-
-
 
 
 
