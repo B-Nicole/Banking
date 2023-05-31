@@ -1,26 +1,38 @@
-package Banking;
+package Banking.Main_Operation;
 
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.Scanner;
 
-class Transaction{
-    private String date;
-    private String type;
-    private double amount;
+class Account{
 
-    public Transaction(String date, String type, double amount){
-        this.date = date;
-        this.type = type;
+    private String name; 
+    private String username;
+    private String password; 
+
+    private Integer accountNumber;
+    private Integer accountBalance;
+    public double amount;
+
+    public Account(String name, String username, String password, Integer accountNumber, Integer accountBalance, double amount){
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.accountNumber = accountNumber;
         this.amount = amount;
+        this.accountBalance = accountBalance;
     }
 
-    public void statement(){
-        return;
-    }
 }
-
-
 
 public class BankingSystem {
   
+
+   public void newAccount(){
+
+        Scanner scan = new Scanner(System.in);
+        scan.close();
+   }
+   public void returningUsers(){
+
+
+   }
 }
