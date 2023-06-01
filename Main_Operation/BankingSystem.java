@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 class Account{
 
-    private String name; 
-    private String username;
-    private String password; 
+    public String name; 
+    public String username;
+    public String password; 
 
-    private Integer accountNumber;
-    private Integer accountBalance;
+    public Integer accountNumber;
+    public Integer accountBalance;
     public double amount;
 
     public Account(String name, String username, String password, Integer accountNumber, Integer accountBalance, double amount){
@@ -29,6 +29,9 @@ public class BankingSystem {
    public void newAccount(){
 
         Scanner scan = new Scanner(System.in);
+        Account act = new Account(null, null, null, null, null, 0);
+        act.name = scan.nextLine();
+        
         scan.close();
    }
    public void returningUsers(){
