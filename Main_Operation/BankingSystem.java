@@ -34,6 +34,17 @@ public class BankingSystem {
         
         scan.close();
    }
+
+    /**
+     * Password must be at least 8 characters
+     * Contain at least 1 uppercase letter
+     * Contain at least 1 lowercase letter
+     * Must contain at least 1 number 
+     * Must contain a special character
+    */
+   public void passwordValidation(String password){
+    
+   }
    public void returningUsers(){
 
 
