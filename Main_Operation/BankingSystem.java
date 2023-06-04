@@ -43,7 +43,16 @@ public class BankingSystem {
      * Must contain a special character
     */
    public void passwordValidation(String password){
-    
+
+      if(password.length() < 8){
+        System.out.println("Password must be at lease 8 characters long");
+      }
+
+      StringBuilder sb = new StringBuilder(password);
+      char[] passArray = password.toCharArray();
+      
+      
+      
    }
    public void returningUsers(){
 
