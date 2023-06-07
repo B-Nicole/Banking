@@ -1,6 +1,9 @@
 package Banking.Main_Operation;
 
+import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class Account{
 
@@ -8,7 +11,7 @@ class Account{
     public String username;
     public String password; 
 
-    public Integer accountNumber;
+    public float  accountNumber;
     public Integer accountBalance;
     public double amount;
 
@@ -29,9 +32,14 @@ public class BankingSystem {
    public void newAccount(){
 
         Scanner scan = new Scanner(System.in);
+        Random rand = new Random();
+
         Account act = new Account(null, null, null, null, null, 0);
         act.name = scan.nextLine();
-        
+        act.username = scan.nextLine();
+        act.password = scan.nextLine();
+        act.accountNumber = accountGeneration();
+        act.accountBalance = 0;
         scan.close();
    }
 
@@ -42,20 +50,17 @@ public class BankingSystem {
      * Must contain at least 1 number 
      * Must contain a special character
     */
-   public void passwordValidation(String password){
+  public void passwordValidation(String password){
 
-      if(password.length() < 8){
-        System.out.println("Password must be at lease 8 characters long");
-      }
-
-      StringBuilder sb = new StringBuilder(password);
-      char[] passArray = password.toCharArray();
+    
       
       
-      
-   }
-   public void returningUsers(){
+  }
+  public static float accountGeneration(){
+    
+      float accountNumber = 0F;
 
+      return accountNumber;
 
-   }
+  }
 }
