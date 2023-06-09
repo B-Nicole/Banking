@@ -22,7 +22,9 @@ public class BankingSystem {
       Scanner scan = new Scanner(System.in);
       Random rand = new Random();
 
-      Account act = new Account(null, null, null, null, null, 0);
+      Account act = new Account(null, null, null, 0, 0, 0);
+      //Security seq = new Security();
+
       act.name = scan.nextLine();
       act.username = scan.nextLine();
       act.password = scan.nextLine();
@@ -30,7 +32,6 @@ public class BankingSystem {
       act.accountBalance = 0;
 
       passwordValidation(act.password);
-      
       scan.close();
   }
 
@@ -45,14 +46,14 @@ public class BankingSystem {
 
   }
 
-  public static void Deposit(){
-
+  public static void Deposit(Account act, int amount){
+    act.accountBalance +=amount;
   }
-  public static void Widthdraw(){
-
+  public static void Widthdraw(Account act, int amount){
+    act.accountBalance -= amount;
   }
 
-  public void statement(){
-
+  public void statement(Account act){
+    System.out.print("Account: " + act.accountNumber + " ----------------- $" + act.accountBalance);
   }
 }

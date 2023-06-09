@@ -7,10 +7,10 @@ class Account{
     public String password; 
 
     public float  accountNumber;
-    public Integer accountBalance;
+    public int accountBalance;
     public double amount;
 
-    public Account(String name, String username, String password, Integer accountNumber, Integer accountBalance, double amount){
+    public Account(String name, String username, String password, int accountNumber, int accountBalance, double amount){
       this.name = name;
       this.username = username;
       this.password = password;
