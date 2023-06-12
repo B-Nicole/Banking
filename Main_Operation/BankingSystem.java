@@ -22,7 +22,7 @@ public class BankingSystem {
       Scanner scan = new Scanner(System.in);
       Random rand = new Random();
 
-      Account act = new Account(null, null, null, 0, 0, 0);
+      Account act = new Account(null, null, null, 0, 0, 0, 0);
       //Security seq = new Security();
 
       act.name = scan.nextLine();
@@ -44,6 +44,11 @@ public class BankingSystem {
 
     return accountNumber;
 
+  }
+  public static float routingGeneration(){
+
+    float routingNumber = 0F;
+    return routingNumber; 
   }
 
   public static void Deposit(Account act, int amount){
