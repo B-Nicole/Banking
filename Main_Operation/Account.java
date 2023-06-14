@@ -6,12 +6,12 @@ class Account{
     public String username;
     public String password; 
 
-    public float  accountNumber;
-    public float routingNumber;
+    public String accountNumber;
+    public String routingNumber;
     public int accountBalance;
     public double amount;
 
-    public Account(String name, String username, String password, float accountNumber, float routingNumber, int accountBalance, double amount){
+    public Account(String name, String username, String password, String accountNumber, String routingNumber, int accountBalance, double amount){
       this.name = name;
       this.username = username;
       this.password = password;

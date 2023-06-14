@@ -2,6 +2,7 @@ package Banking.Main_Operation;
 
 import java.util.Random;
 import java.util.Scanner;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,7 +23,7 @@ public class BankingSystem {
       Scanner scan = new Scanner(System.in);
       Random rand = new Random();
 
-      Account act = new Account(null, null, null, 0, 0, 0, 0);
+      Account act = new Account(null, null, null, null, null, 0, 0);
       //Security seq = new Security();
 
       act.name = scan.nextLine();
@@ -38,18 +39,45 @@ public class BankingSystem {
   public void passwordValidation(String password){
       
   }
-  public static float accountGeneration(){
+  public static String accountGeneration(){
     
-    float accountNumber = 0F;
+    String accountNumber = "NEKO";
+
+    Random rand = new Random();
+    for (int i = 0; i < 20; i++){
+        int n = rand.nextInt(10) + 0;
+        accountNumber += Integer.toString(n);
+      }
+      for (int i = 0; i < 15; i++){
+        System.out.print(accountNumber.charAt(i));
+      }
 
     return accountNumber;
 
   }
-  public static float routingGeneration(){
 
-    float routingNumber = 0F;
-    return routingNumber; 
+
+  public static String routingGeneration(){
+    
+    String routingNumber = "";
+
+    Random rand = new Random();
+    for (int i = 0; i < 20; i++){
+        int n = rand.nextInt(10) + 0;
+        routingNumber += Integer.toString(n);
+      }
+      for (int i = 0; i < 15; i++){
+        System.out.print(routingNumber.charAt(i));
+      }
+
+    return routingNumber;
+
   }
+
+
+
+
+
 
   public static void Deposit(Account act, int amount){
     act.accountBalance +=amount;
