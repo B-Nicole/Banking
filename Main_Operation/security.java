@@ -11,4 +11,10 @@ import java.util.regex.Pattern;
 
 public class security {
     private static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+
+    public boolean test (String password){
+        if(password.matches(PASSWORD_PATTERN))
+            return true;
+        return false;
+    }
 }

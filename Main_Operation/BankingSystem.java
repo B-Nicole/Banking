@@ -3,9 +3,6 @@ package Banking.Main_Operation;
 import java.util.Random;
 import java.util.Scanner;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class BankingSystem {
   
   public static void welcome(){
@@ -20,25 +17,26 @@ public class BankingSystem {
 
   public void newAccount(){
 
-      Scanner scan = new Scanner(System.in);
-      Random rand = new Random();
+    Scanner scan = new Scanner(System.in);
+    Random rand = new Random();
 
-      Account act = new Account(null, null, null, null, null, 0, 0);
-      //Security seq = new Security();
+    Account act = new Account(null, null, null, null, null, 0, 0);
+    //Security seq = new Security();
 
-      act.name = scan.nextLine();
-      act.username = scan.nextLine();
-      act.password = scan.nextLine();
-      act.accountNumber = accountGeneration();
-      act.accountBalance = 0;
-
-      passwordValidation(act.password);
-      scan.close();
+    act.name = scan.nextLine();
+    act.username = scan.nextLine();
+    act.password = scan.nextLine();
+    act.accountNumber = accountGeneration();
+    act.accountBalance = 0;
+     
+    System.out.println("Account Number: " + act.accountNumber);
+    System.out.println("Routing Number: " + act.routingNumber);
+    System.out.println("Balance: " + act.accountBalance);
+    System.out.println("Username: " + act.username);
+    System.out.println("Password: " + act.password);
+    scan.close();
   }
 
-  public void passwordValidation(String password){
-      
-  }
   public static String accountGeneration(){
     
     String accountNumber = "NEKO";
@@ -76,9 +74,6 @@ public class BankingSystem {
 
 
 
-
-
-
   public static void Deposit(Account act, int amount){
     act.accountBalance +=amount;
   }
@@ -86,7 +81,14 @@ public class BankingSystem {
     act.accountBalance -= amount;
   }
 
-  public void statement(Account act){
-    System.out.print("Account: " + act.accountNumber + " ----------------- $" + act.accountBalance);
-  }
+  /*public void statement( ){
+    System.out.println("Account Number: " + act.accountNumber);
+    System.out.println("Routing Number: " + act.routingNumber);
+    System.out.println("Balance: " + act.accountBalance);
+    System.out.println("Username: " + act.username);
+    System.out.println("Password: " + act.password);
+
+  }*/
+
+
 }

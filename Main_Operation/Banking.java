@@ -10,7 +10,8 @@ public class Banking{
 
         Scanner scan = new Scanner(System.in);
         BankingSystem bs = new BankingSystem();
-        Account act = new Account(null, null, null,null, null, 0, 0);
+        bs.newAccount();
+        
 
       
         scan.close();
