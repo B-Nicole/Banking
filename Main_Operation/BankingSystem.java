@@ -27,6 +27,7 @@ public class BankingSystem {
     act.username = scan.nextLine();
     act.password = scan.nextLine();
     act.accountNumber = accountGeneration();
+    act.routingNumber = routingGeneration();
     act.accountBalance = 0;
      
     System.out.println("Account Number: " + act.accountNumber);
